@@ -1,0 +1,91 @@
+.header {
+    color: white;
+    font-size: 4rem;
+    letter-spacing: .05em;
+    font-weight:bold;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+.square {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 5px solid #1CDBF5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.square:first-child,
+.square:nth-child(2),
+.square:nth-child(3) {
+    border-top: none;
+}
+
+.square:nth-child(3n + 1) {
+    border-left: none;
+}
+
+.square:nth-child(3n + 3) {
+    border-right: none;
+}
+
+.square:last-child,
+.square:nth-child(8),
+.square:nth-child(7) {
+    border-bottom: none;
+}
+
+.fc-aqua {
+    color: #1CDBF5;
+    font-size: var(--mark-size);
+}
+
+.fc-white {
+    color: white;
+    font-size: var(--mark-size);
+}
+
+
+.status {
+    font-size: larger;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reset-button {
+    background-color: #1CDBF5 !important;
+    font-size: 3rem;
+    background-color: white;
+    border-radius: 5px;
+    padding: .15em .5em;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    width: max-content;
+
+}
+
+.reset-button:hover {
+    color: red;
+    border-color: white;
+}
